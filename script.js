@@ -1,9 +1,9 @@
-// Mobile Menu
+// Mobile Menu Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 
-// Counter Animation
+// Counter Animation Logic
 const counters = document.querySelectorAll('.counter');
 const speed = 200;
 const startCount = () => {
@@ -14,14 +14,14 @@ const startCount = () => {
             const inc = target / speed;
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 20);
+                setTimeout(updateCount, 15);
             } else { counter.innerText = target; }
         };
         updateCount();
     });
 };
 
-// Start when visible
+// Intersection Observer to trigger on scroll
 const statsSection = document.querySelector('.stats');
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
@@ -31,4 +31,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 observer.observe(statsSection);
 
+// Initialize Scroll Animations
 AOS.init({ duration: 1000, once: true });
