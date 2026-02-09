@@ -14,19 +14,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Logo adjustment for Navbar */
-        .navbar .logo img {
-            height: 50px;
-            width: auto;
-            display: block;
-            transition: 0.3s ease-in-out;
-        }
-        .navbar .logo img:hover {
-            transform: scale(1.08);
-        }
-    </style>
 </head>
 <body>
 
@@ -35,13 +22,13 @@
             <a href="#home" class="logo">
                 <img src="logo.png" alt="LK Graphix Logo">
             </a>
-            
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact" class="btn-highlight">Contact Me</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="btn-highlight">Contact</a></li>
             </ul>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -69,8 +56,8 @@
             </div>
             <div class="about-content" data-aos="fade-up" data-aos-delay="200">
                 <div class="about-text">
-                    <h3>I am a Creative Designer based in Sri Lanka.</h3>
-                    <p>With years of experience in the graphic design industry, I help businesses build their identity through creative visual solutions. I specialize in Adobe Photoshop, Illustrator, and modern branding techniques.</p>
+                    <h3>Creative Designer based in Sri Lanka.</h3>
+                    <p>I help businesses build their identity through creative visual solutions. I specialize in Adobe Photoshop, Illustrator, and modern branding techniques.</p>
                     <div class="skills">
                         <span data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-adobe"></i> Photoshop</span>
                         <span data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-pen-nib"></i> Illustrator</span>
@@ -111,58 +98,76 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>My Portfolio</h2>
-                <p>Check out my latest projects</p>
+                <p>Latest Projects</p>
             </div>
-            
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="image-box">
-                        <img src="design1.jpg" alt="Design 1">
-                    </div>
-                    <div class="overlay">
-                        <h3>Creative Branding</h3>
-                        <p>Branding Design</p>
-                    </div>
+                    <div class="image-box"><img src="design1.jpg" alt="Design 1"></div>
+                    <div class="overlay"><h3>Branding</h3><p>Logo Design</p></div>
                 </div>
-
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="image-box">
-                        <img src="design2.jpg" alt="Design 2">
-                    </div>
-                    <div class="overlay">
-                        <h3>Modern Logo Design</h3>
-                        <p>Logo Concept</p>
-                    </div>
+                    <div class="image-box"><img src="design2.jpg" alt="Design 2"></div>
+                    <div class="overlay"><h3>Social Media</h3><p>Marketing Ads</p></div>
                 </div>
-
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="image-box">
-                        <img src="design3.jpg" alt="Design 3">
-                    </div>
-                    <div class="overlay">
-                        <h3>Social Media Pack</h3>
-                        <p>Marketing Ads</p>
-                    </div>
+                    <div class="image-box"><img src="design3.jpg" alt="Design 3"></div>
+                    <div class="overlay"><h3>Logo Concept</h3><p>Modern Design</p></div>
                 </div>
-
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="image-box">
-                        <img src="design4.jpg" alt="Design 4">
-                    </div>
-                    <div class="overlay">
-                        <h3>Advertising Flyer</h3>
-                        <p>Print Media</p>
-                    </div>
+                    <div class="image-box"><img src="design4.jpg" alt="Design 4"></div>
+                    <div class="overlay"><h3>Flyer Design</h3><p>Print Media</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section bg-dark">
+    <section id="pricing" class="section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Pricing Plans</h2>
+                <p>Choose the best package for you</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Basic</h3>
+                    <div class="price">Rs. 2,500</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 Logo Concept</li>
+                        <li><i class="fas fa-check"></i> JPG/PNG Formats</li>
+                        <li><i class="fas fa-check"></i> 2 Revisions</li>
+                    </ul>
+                    <a href="https://wa.me/94775169480?text=I'm interested in the Basic Plan" class="btn btn-secondary">Order Now</a>
+                </div>
+                <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="badge">Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">Rs. 5,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 2 Logo Concepts</li>
+                        <li><i class="fas fa-check"></i> Source Files (AI/PSD)</li>
+                        <li><i class="fas fa-check"></i> Unlimited Revisions</li>
+                    </ul>
+                    <a href="https://wa.me/94775169480?text=I'm interested in the Standard Plan" class="btn btn-primary">Order Now</a>
+                </div>
+                <div class="pricing-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>Premium</h3>
+                    <div class="price">Rs. 10,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 3 Premium Concepts</li>
+                        <li><i class="fas fa-check"></i> Full Branding Kit</li>
+                        <li><i class="fas fa-check"></i> VIP Support</li>
+                    </ul>
+                    <a href="https://wa.me/94775169480?text=I'm interested in the Premium Plan" class="btn btn-secondary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Contact Me</h2>
-                <p>Let's work together</p>
+                <p>Let's start your project</p>
             </div>
             <div class="contact-box">
                 <div class="contact-info" data-aos="fade-right">
@@ -180,7 +185,7 @@
                 <form class="contact-form" data-aos="fade-left">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Tell me about your project" required></textarea>
+                    <textarea placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -200,19 +205,10 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-
-        // Mobile Menu Toggle
+        AOS.init({ duration: 1000, once: true });
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
     </script>
 </body>
 </html>
