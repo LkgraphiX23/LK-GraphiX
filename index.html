@@ -7,7 +7,7 @@
     
     <link rel="icon" type="image/png" href="favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -56,7 +56,7 @@
             </div>
             <div class="about-content" data-aos="fade-up" data-aos-delay="200">
                 <div class="about-text">
-                    <h3>I am a Creative Designer based in Sri Lanka.</h3>
+                    <h3>Creative Designer based in Sri Lanka.</h3>
                     <p>I help businesses build their identity through creative visual solutions. I specialize in Adobe Photoshop, Illustrator, and modern branding techniques.</p>
                     <div class="skills">
                         <span data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-adobe"></i> Photoshop</span>
@@ -98,24 +98,24 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>My Portfolio</h2>
-                <p>Check out my latest projects</p>
+                <p>Latest Projects</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="image-box"><img src="design1.jpg" alt="Design 1"></div>
-                    <div class="overlay"><h3>Creative Branding</h3><p>Logo Design</p></div>
+                    <div class="overlay"><h3>Branding</h3><p>Logo Design</p></div>
                 </div>
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="image-box"><img src="design2.jpg" alt="Design 2"></div>
-                    <div class="overlay"><h3>Modern Logo</h3><p>Concept Design</p></div>
+                    <div class="overlay"><h3>Social Media</h3><p>Marketing Ads</p></div>
                 </div>
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="image-box"><img src="design3.jpg" alt="Design 3"></div>
-                    <div class="overlay"><h3>Social Media Kit</h3><p>Marketing Ads</p></div>
+                    <div class="overlay"><h3>Logo Concept</h3><p>Modern Design</p></div>
                 </div>
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="image-box"><img src="design4.jpg" alt="Design 4"></div>
-                    <div class="overlay"><h3>Advertising Flyer</h3><p>Print Media</p></div>
+                    <div class="overlay"><h3>Flyer Design</h3><p>Print Media</p></div>
                 </div>
             </div>
         </div>
@@ -185,10 +185,12 @@
                         <p>+94 77 516 9480</p>
                     </div>
                 </div>
-                <form class="contact-form" data-aos="fade-left">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Tell me about your project" required></textarea>
+                
+                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form" data-aos="fade-left">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Tell me about your project" required></textarea>
+                    <input type="hidden" name="_next" value="https://lkgraphix23.github.io/LK-GraphiX/">
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -211,8 +213,9 @@
         AOS.init({ duration: 1000, once: true });
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        menuToggle.addEventListener('click', () => { 
+            navLinks.classList.toggle('active'); 
+        });
     </script>
 </body>
 </html>
-
