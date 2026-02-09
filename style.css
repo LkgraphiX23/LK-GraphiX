@@ -19,7 +19,7 @@ body {
     padding: 0 20px;
 }
 
-section { padding: 100px 0; }
+section { padding: 80px 0; }
 .bg-dark { background-color: #0a0a0a; }
 
 .section-header {
@@ -53,9 +53,16 @@ section { padding: 100px 0; }
     width: 100%;
 }
 
+/* --- LOGO SIZE FIXED HERE --- */
 .navbar .logo img {
-    height: 60px;
-    transition: 0.3s;
+    height: 45px; /* Logo එකේ උස මෙතනින් පාලනය වේ */
+    width: auto;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -85,11 +92,12 @@ section { padding: 100px 0; }
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080');
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1920');
     background-size: cover;
+    background-position: center;
 }
 
-.hero .title { font-size: 4rem; line-height: 1.2; }
+.hero .title { font-size: 4rem; line-height: 1.2; margin-bottom: 20px; }
 .hero span { color: #00ff88; }
 
 .btn {
@@ -98,11 +106,13 @@ section { padding: 100px 0; }
     display: inline-block;
     border-radius: 5px;
     font-weight: 600;
-    margin-top: 20px;
+    transition: 0.3s;
 }
 
-.btn-primary { background: #00ff88; color: #000; margin-right: 15px; }
+.btn-primary { background: #00ff88; color: #000; margin-right: 15px; border: 1px solid #00ff88; }
+.btn-primary:hover { background: transparent; color: #00ff88; }
 .btn-secondary { border: 2px solid #00ff88; color: #00ff88; }
+.btn-secondary:hover { background: #00ff88; color: #000; }
 
 /* Portfolio Grid */
 .portfolio-grid {
@@ -115,16 +125,34 @@ section { padding: 100px 0; }
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    aspect-ratio: 4/3;
 }
 
 .portfolio-item img {
     width: 100%;
     height: 100%;
-    display: block;
+    object-fit: cover;
     transition: 0.5s;
 }
 
 .portfolio-item:hover img { transform: scale(1.1); }
+
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 136, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: #000;
+}
+
+.portfolio-item:hover .overlay { bottom: 0; }
 
 /* Pricing Section */
 .pricing-grid {
@@ -144,7 +172,7 @@ section { padding: 100px 0; }
 }
 
 .pricing-card:hover { border-color: #00ff88; transform: translateY(-10px); }
-.featured { border-color: #00ff88; transform: scale(1.05); }
+.featured { border-color: #00ff88; transform: scale(1.05); background: #111; }
 
 .badge {
     position: absolute;
@@ -156,22 +184,26 @@ section { padding: 100px 0; }
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .price { font-size: 2.5rem; color: #00ff88; margin: 20px 0; font-weight: 700; }
+.price span { font-size: 1rem; color: #888; }
 
 .pricing-card ul { list-style: none; margin-bottom: 30px; text-align: left; }
-.pricing-card ul li { margin-bottom: 15px; color: #ccc; }
+.pricing-card ul li { margin-bottom: 12px; color: #ccc; }
 .pricing-card ul li i { color: #00ff88; margin-right: 10px; }
 
-/* Contact & Footer */
+/* Contact Section */
 .contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 .contact-form input, .contact-form textarea {
     width: 100%; padding: 15px; margin-bottom: 15px;
     background: #1a1a1a; border: 1px solid #333; color: #fff;
+    border-radius: 5px; font-family: inherit;
 }
 
 footer { text-align: center; padding: 50px 0; border-top: 1px solid #222; }
+.social-icons { margin-top: 20px; }
 .social-icons a { color: #fff; font-size: 1.5rem; margin: 0 15px; transition: 0.3s; }
 .social-icons a:hover { color: #00ff88; }
 
@@ -184,9 +216,12 @@ footer { text-align: center; padding: 50px 0; border-top: 1px solid #222; }
         display: none;
         position: absolute; top: 80px; left: 0; width: 100%;
         background: #0f0f0f; flex-direction: column; text-align: center;
+        padding: 20px 0; border-bottom: 1px solid #222;
     }
     .nav-links.active { display: flex; }
-    .nav-links li { padding: 15px 0; }
+    .nav-links li { padding: 10px 0; }
+    .nav-links li a { margin: 0; }
     .contact-box { grid-template-columns: 1fr; }
     .hero .title { font-size: 2.5rem; }
+    .pricing-card { transform: scale(1) !important; }
 }
