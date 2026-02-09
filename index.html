@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LK Graphix | Professional Portfolio</title>
     
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,17 +14,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
-        /* Logo එක Navbar එකට ගැලපෙන විදියට හදන කුඩා CSS කෑල්ලක් */
+        /* Logo adjustment for Navbar */
         .navbar .logo img {
             height: 50px;
             width: auto;
             display: block;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
         }
         .navbar .logo img:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -51,7 +53,7 @@
         <div class="container hero-content" data-aos="fade-up">
             <h3 class="subtitle">Hello, I'm a</h3>
             <h1 class="title">Professional <br><span>Graphic Designer</span></h1>
-            <p class="description">Creating unique visual experiences that elevate your brand to the next level. Logos, Branding, and Social Media Designs.</p>
+            <p class="description">Creating unique visual experiences that elevate your brand to the next level. Specialize in Logos, Branding, and Social Media Designs.</p>
             <div class="buttons">
                 <a href="#portfolio" class="btn btn-primary">My Work</a>
                 <a href="https://wa.me/94775169480" class="btn btn-secondary">Hire Me</a>
@@ -119,7 +121,7 @@
                     </div>
                     <div class="overlay">
                         <h3>Creative Branding</h3>
-                        <p>Graphic Design</p>
+                        <p>Branding Design</p>
                     </div>
                 </div>
 
@@ -128,8 +130,8 @@
                         <img src="design2.jpg" alt="Design 2">
                     </div>
                     <div class="overlay">
-                        <h3>Social Media Pack</h3>
-                        <p>Marketing</p>
+                        <h3>Modern Logo Design</h3>
+                        <p>Logo Concept</p>
                     </div>
                 </div>
 
@@ -138,8 +140,8 @@
                         <img src="design3.jpg" alt="Design 3">
                     </div>
                     <div class="overlay">
-                        <h3>Modern Logo Design</h3>
-                        <p>Branding</p>
+                        <h3>Social Media Pack</h3>
+                        <p>Marketing Ads</p>
                     </div>
                 </div>
 
@@ -175,10 +177,10 @@
                         <p>+94 77 516 9480</p>
                     </div>
                 </div>
-                <form class="contact-form" data-aos="fade-left" action="https://formspree.io/f/your-id" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Tell me about your project" required></textarea>
+                <form class="contact-form" data-aos="fade-left">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Tell me about your project" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -198,7 +200,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Animations
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true,
@@ -214,7 +216,3 @@
     </script>
 </body>
 </html>
-
-
-
-
