@@ -1,11 +1,22 @@
 // Mobile Menu
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+menuToggle.addEventListener('click', () => { 
+    navLinks.classList.toggle('active'); 
+});
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
 
 // Counter Animation
 const counters = document.querySelectorAll('.counter');
 const speed = 200;
+
 const startCount = () => {
     counters.forEach(counter => {
         const updateCount = () => {
@@ -29,7 +40,10 @@ const observer = new IntersectionObserver((entries) => {
         observer.unobserve(statsSection);
     }
 }, { threshold: 0.5 });
-observer.observe(statsSection);
+
+if(statsSection) {
+    observer.observe(statsSection);
+}
 
 // FAQ Accordion
 document.querySelectorAll('.faq-item').forEach(item => {
@@ -47,6 +61,7 @@ window.onscroll = () => {
         backToTop.style.display = "none";
     }
 };
+
 backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
