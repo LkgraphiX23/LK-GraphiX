@@ -6,7 +6,8 @@
     <title>LK Graphix | Professional Portfolio</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,7 +19,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="#home" class="logo"><img src="logo.png" alt="LK Graphix Logo"></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -26,7 +27,7 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact" class="btn-highlight">Contact Me</a></li>
             </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
@@ -59,7 +60,67 @@
         </div>
     </section>
 
-    <section id="pricing" class="section">
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content" data-aos="fade-up">
+                <h3>Transforming Ideas into Iconic Visual Realities.</h3>
+                <p>I am a Professional Graphic Designer dedicated to delivering high-impact visual solutions for clients across the globe. I focus on creating designs that leave a lasting impression.</p>
+                <div class="skills">
+                    <span><i class="fab fa-adobe"></i> Photoshop</span>
+                    <span><i class="fas fa-pen-nib"></i> Illustrator</span>
+                    <span><i class="fas fa-layer-group"></i> Branding</span>
+                    <span><i class="fas fa-image"></i> Social Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>My Services</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in">
+                    <i class="fas fa-bezier-curve"></i>
+                    <h3>Logo Design</h3>
+                    <p>Unique and memorable logos that represent your brand identity perfectly.</p>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Social Media</h3>
+                    <p>Eye-catching posts and banners for all digital platforms.</p>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Web Graphics</h3>
+                    <p>UI elements, banners, and graphics optimized for modern websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>My Portfolio</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up"><img src="design1.jpg" alt="Work 1"><div class="overlay"><h3>Branding</h3></div></div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><img src="design2.jpg" alt="Work 2"><div class="overlay"><h3>Social Media</h3></div></div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><img src="design3.jpg" alt="Work 3"><div class="overlay"><h3>Logos</h3></div></div>
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300"><img src="design4.jpg" alt="Work 4"><div class="overlay"><h3>Flyer Design</h3></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section bg-dark">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Pricing Plans</h2>
@@ -69,7 +130,7 @@
                 <div class="pricing-card" data-aos="zoom-in">
                     <h3>Basic</h3>
                     <div class="price">$25</div>
-                    <ul class="no-dots">
+                    <ul class="price-list">
                         <li>1 Design Concept</li>
                         <li>High Quality JPG/PNG</li>
                         <li>2 Revisions</li>
@@ -80,7 +141,7 @@
                     <div class="badge">Popular</div>
                     <h3>Standard</h3>
                     <div class="price">$60</div>
-                    <ul class="no-dots">
+                    <ul class="price-list">
                         <li>2 Design Concepts</li>
                         <li>Source Files (AI/PSD)</li>
                         <li>Unlimited Revisions</li>
@@ -90,7 +151,7 @@
                 <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
                     <h3>Premium</h3>
                     <div class="price">$120</div>
-                    <ul class="no-dots">
+                    <ul class="price-list">
                         <li>3 Premium Concepts</li>
                         <li>Full Branding Kit</li>
                         <li>VIP Priority Support</li>
@@ -101,55 +162,74 @@
         </div>
     </section>
 
-    <section id="reviews" class="section bg-dark">
+    <section id="reviews" class="section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Client Reviews</h2>
                 <div class="underline"></div>
             </div>
-            
-            <div class="testimonial-slider" data-aos="fade-up">
-                <div class="testimonial-card">
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-right">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Great work! Delivered my logo exactly how I wanted it. Very professional."</p>
-                    <h4>- Alex J.</h4>
+                    <p>"Excellent service and very creative designs. Highly recommended for everyone!"</p>
+                    <h4>- Samantha Perera</h4>
                 </div>
             </div>
-
-            <div class="review-form-container" data-aos="fade-up">
-                <h3>Submit Your Review</h3>
+            <div class="review-form-box" data-aos="fade-up">
+                <h3>Leave a Review</h3>
                 <form action="https://formspree.io/f/xbdalojp" method="POST" class="review-form">
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <textarea name="review" placeholder="Write your feedback here..." required></textarea>
-                    <button type="submit" class="btn btn-primary">Post Review</button>
+                    <textarea name="review" placeholder="Write your experience..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="faq" class="section bg-dark">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>FAQ</h2>
                 <div class="underline"></div>
             </div>
             <div class="faq-container">
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <div class="faq-question">Do you provide source files? <i class="fas fa-plus"></i></div>
                     <div class="faq-answer"><p>Yes, AI and PSD files are provided in Standard and Premium plans.</p></div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <div class="faq-question">What is the turnaround time? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Standard delivery is within 24-48 hours.</p></div>
+                    <div class="faq-answer"><p>Usually, I deliver designs within 24-48 hours.</p></div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <div class="faq-question">Can I request revisions? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Of course! I offer revisions to ensure you're 100% happy.</p></div>
+                    <div class="faq-answer"><p>Yes, I offer revisions to ensure your complete satisfaction.</p></div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Payment methods? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Bank Transfer, PayPal, and Crypto are accepted.</p></div>
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">How can I pay? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer"><p>I accept Bank Transfer, PayPal, and Crypto.</p></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-box">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item"><i class="fas fa-envelope"></i><h4>Email</h4><p>lkdesing2023@gmail.com</p></div>
+                    <div class="info-item"><i class="fas fa-phone"></i><h4>WhatsApp</h4><p>+94 77 516 9480</p></div>
+                </div>
+                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form" data-aos="fade-left">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="msg" placeholder="Tell me about your project..." required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
