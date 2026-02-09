@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LK Graphix | Professional Portfolio</title>
+    
     <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +18,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="#home" class="logo"><img src="logo.png" alt="LK Graphix Logo"></a>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -27,16 +26,15 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact" class="btn-highlight">Contact Me</a></li>
             </ul>
-            <div class="menu-toggle" id="mobileMenu"><i class="fas fa-bars"></i></div>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
     <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content" data-aos="fade-up">
-            <h3 class="subtitle">Hi I'm A</h3>
+        <div class="container" data-aos="fade-up">
+            <h3 class="subtitle">Hello, I'm a</h3>
             <h1 class="title">Professional <br><span>Graphic Designer</span></h1>
-            <p class="description">Creating high-end visual solutions for global brands. We bring your ideas to life with professional branding and stunning graphics.</p>
+            <p class="description">Creating high-quality visual solutions for brands worldwide. From creative logos to stunning social media and print designs.</p>
             <div class="buttons">
                 <a href="#portfolio" class="btn btn-primary">My Work</a>
                 <a href="https://wa.me/94775169480" class="btn btn-secondary">Hire Me</a>
@@ -47,15 +45,15 @@
     <section class="stats">
         <div class="container stats-grid">
             <div class="stat-item" data-aos="zoom-in">
-                <div class="stat-num"><h2 class="counter" data-target="250">0</h2><span>+</span></div>
+                <div class="stat-header"><h2 class="counter" data-target="250">0</h2><span>+</span></div>
                 <p>Projects Done</p>
             </div>
             <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-                <div class="stat-num"><h2 class="counter" data-target="150">0</h2><span>+</span></div>
+                <div class="stat-header"><h2 class="counter" data-target="150">0</h2><span>+</span></div>
                 <p>Happy Clients</p>
             </div>
             <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="stat-num"><h2 class="counter" data-target="5">0</h2><span>+</span></div>
+                <div class="stat-header"><h2 class="counter" data-target="5">0</h2><span>+</span></div>
                 <p>Years Experience</p>
             </div>
         </div>
@@ -68,8 +66,8 @@
                 <div class="underline"></div>
             </div>
             <div class="about-content" data-aos="fade-up">
-                <h3>Transforming Ideas into Iconic Realities.</h3>
-                <p>I am a Professional Graphic Designer dedicated to delivering high-impact visual solutions. My work focuses on aesthetic excellence and brand consistency.</p>
+                <h3>Transforming Ideas into Iconic Visual Realities.</h3>
+                <p>I am a Professional Graphic Designer dedicated to delivering high-impact visual solutions for clients across the globe.</p>
                 <div class="skills">
                     <span><i class="fab fa-adobe"></i> Photoshop</span>
                     <span><i class="fas fa-pen-nib"></i> Illustrator</span>
@@ -79,132 +77,41 @@
         </div>
     </section>
 
-    <section id="services" class="section bg-dark">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>My Services</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="zoom-in">
-                    <i class="fas fa-bezier-curve"></i>
-                    <h3>Logo Design</h3>
-                    <p>Unique and professional logos that stand out.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Social Media</h3>
-                    <p>Creative posts and covers for all platforms.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-image"></i>
-                    <h3>Branding</h3>
-                    <p>Complete visual identity for your business.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>My Portfolio</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-aos="fade-up"><img src="design1.jpg" alt="Work 1"><div class="overlay"><h3>Branding</h3></div></div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><img src="design2.jpg" alt="Work 2"><div class="overlay"><h3>Social Media</h3></div></div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><img src="design3.jpg" alt="Work 3"><div class="overlay"><h3>Logos</h3></div></div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300"><img src="design4.jpg" alt="Work 4"><div class="overlay"><h3>Print Design</h3></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="section bg-dark">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Pricing Plans</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card" data-aos="zoom-in">
-                    <h3>Basic</h3>
-                    <div class="price">$25</div>
-                    <ul class="clean-list">
-                        <li>1 Custom Concept</li>
-                        <li>High Res JPG/PNG</li>
-                        <li>2 Revisions</li>
-                    </ul>
-                    <a href="https://wa.me/94775169480" class="btn btn-secondary">Order Now</a>
-                </div>
-                <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="badge">Most Popular</div>
-                    <h3>Standard</h3>
-                    <div class="price">$60</div>
-                    <ul class="clean-list">
-                        <li>2 Custom Concepts</li>
-                        <li>Source Files (AI/PSD)</li>
-                        <li>Unlimited Revisions</li>
-                    </ul>
-                    <a href="https://wa.me/94775169480" class="btn btn-primary">Order Now</a>
-                </div>
-                <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>Premium</h3>
-                    <div class="price">$120</div>
-                    <ul class="clean-list">
-                        <li>3 VIP Concepts</li>
-                        <li>Full Branding Kit</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="https://wa.me/94775169480" class="btn btn-secondary">Order Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section bg-dark">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Client Reviews</h2>
                 <div class="underline"></div>
             </div>
             <div class="testimonial-grid">
-                <div class="testimonial-card" data-aos="fade-right">
+                <div class="testimonial-card" data-aos="fade-up">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"One of the best designers I've worked with. Extremely creative and patient."</p>
-                    <h4>- Samantha P.</h4>
+                    <p>"Excellent work! Very creative and delivered on time. Highly recommended for logo design."</p>
+                    <h4>- John Doe</h4>
                 </div>
-                <div class="testimonial-card" data-aos="fade-left">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"The branding was spot on! My business looks so much more professional now."</p>
-                    <h4>- Robert G.</h4>
+                    <p>"The social media posts were stunning. It really helped our brand growth on Instagram."</p>
+                    <h4>- Sarah J.</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="section bg-dark">
+    <section id="faq" class="section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>FAQ</h2>
+                <h2>Frequently Asked Questions</h2>
                 <div class="underline"></div>
             </div>
             <div class="faq-container">
                 <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question">What files will I receive? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Depending on the plan, you receive JPG, PNG, AI, PSD, and PDF files.</p></div>
+                    <div class="faq-question">How long does a logo design take? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Typically, it takes 2-4 business days depending on the complexity and revisions required.</p></div>
                 </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question">How long does it take? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Usually, the first draft is delivered within 24-48 hours.</p></div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question">Do you offer refunds? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>I offer revisions to ensure satisfaction. Refunds depend on the project stage.</p></div>
-                </div>
-                <div class="faq-item" data-aos="fade-up">
-                    <div class="faq-question">Can I pay with Crypto? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer"><p>Yes, I accept Bank Transfer, PayPal, and Cryptocurrency.</p></div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">Do you provide source files? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Yes, I provide AI, EPS, PSD, and PDF formats in Standard and Premium plans.</p></div>
                 </div>
             </div>
         </div>
@@ -216,18 +123,12 @@
                 <h2>Contact Me</h2>
                 <div class="underline"></div>
             </div>
-            <div class="contact-wrapper">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="info-card">
-                        <i class="fas fa-envelope"></i>
-                        <div><h4>Email Me</h4><p>lkdesing2023@gmail.com</p></div>
-                    </div>
-                    <div class="info-card">
-                        <i class="fab fa-whatsapp"></i>
-                        <div><h4>WhatsApp</h4><p>+94 77 516 9480</p></div>
-                    </div>
+            <div class="contact-box">
+                <div class="contact-info">
+                    <div class="info-item"><i class="fas fa-envelope"></i><h4>Email</h4><p>lkdesing2023@gmail.com</p></div>
+                    <div class="info-item"><i class="fas fa-phone"></i><h4>WhatsApp</h4><p>+94 77 516 9480</p></div>
                 </div>
-                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form" data-aos="fade-left">
+                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
@@ -241,9 +142,9 @@
         <div class="container">
             <p>&copy; 2026 <strong>LK Graphix</strong>. All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/94775169480"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/94775169480" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
@@ -252,4 +153,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
