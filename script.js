@@ -1,7 +1,7 @@
-// Initialize AOS
+// AOS Animation Init
 AOS.init({ duration: 1000, once: true });
 
-// Mobile Menu
+// Mobile Navigation
 const menuToggle = document.getElementById('mobileMenu');
 const navLinks = document.getElementById('navLinks');
 menuToggle.addEventListener('click', () => {
@@ -28,7 +28,7 @@ btt.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Stats Counter
+// Stats Counter Animation
 const counters = document.querySelectorAll('.counter');
 const startCount = () => {
     counters.forEach(counter => {
@@ -45,7 +45,7 @@ const startCount = () => {
     });
 };
 
-// Start counters on scroll
+// Intersection Observer for Stats
 const statsSec = document.querySelector('.stats');
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
