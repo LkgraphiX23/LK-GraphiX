@@ -1,56 +1,55 @@
-// Initialize AOS
-AOS.init({ duration: 1000, once: true });
-
 // Mobile Menu
-const menuToggle = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
-menuToggle.onclick = () => {
-    navLinks.classList.toggle('active');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+const startCount = () => {
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 15);
+            } else { counter.innerText = target; }
+        };
+        updateCount();
+    });
 };
+
+// Start Animation on Scroll
+const statsSection = document.querySelector('.stats');
+const observer = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting) {
+        startCount();
+        observer.unobserve(statsSection);
+    }
+}, { threshold: 0.5 });
+observer.observe(statsSection);
 
 // FAQ Accordion
 document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', () => {
         item.classList.toggle('active');
-        const icon = item.querySelector('i');
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
     });
 });
 
 // Back to Top Button
-const btt = document.getElementById('backToTop');
+const backToTop = document.getElementById('backToTop');
 window.onscroll = () => {
-    if (window.scrollY > 400) { btt.style.display = "flex"; }
-    else { btt.style.display = "none"; }
-};
-btt.onclick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-// Stats Counter
-const counters = document.querySelectorAll('.counter');
-const startCount = () => {
-    counters.forEach(counter => {
-        const update = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const inc = target / 100;
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(update, 20);
-            } else { counter.innerText = target; }
-        };
-        update();
-    });
-};
-
-// Observer for Stats section
-const statsSec = document.querySelector('.stats');
-const observer = new IntersectionObserver((entries) => {
-    if(entries[0].isIntersecting) {
-        startCount();
-        observer.unobserve(statsSec);
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
     }
-}, { threshold: 0.5 });
-observer.observe(statsSec);
+};
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Initialize AOS
+AOS.init({ duration: 1000, once: true });
