@@ -1,12 +1,12 @@
-// AOS Library
+// Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Mobile Menu Toggle
+// Mobile Menu
 const menuToggle = document.getElementById('mobileMenu');
 const navLinks = document.getElementById('navLinks');
-menuToggle.addEventListener('click', () => {
+menuToggle.onclick = () => {
     navLinks.classList.toggle('active');
-});
+};
 
 // FAQ Accordion
 document.querySelectorAll('.faq-item').forEach(item => {
@@ -24,11 +24,11 @@ window.onscroll = () => {
     if (window.scrollY > 400) { btt.style.display = "flex"; }
     else { btt.style.display = "none"; }
 };
-btt.addEventListener('click', () => {
+btt.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+};
 
-// Stats Animation
+// Stats Counter
 const counters = document.querySelectorAll('.counter');
 const startCount = () => {
     counters.forEach(counter => {
@@ -38,13 +38,14 @@ const startCount = () => {
             const inc = target / 100;
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
-                setTimeout(update, 25);
+                setTimeout(update, 20);
             } else { counter.innerText = target; }
         };
         update();
     });
 };
 
+// Observer for Stats section
 const statsSec = document.querySelector('.stats');
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
