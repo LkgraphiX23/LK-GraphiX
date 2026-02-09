@@ -15,9 +15,7 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="LK Graphix Logo">
-            </a>
+            <a href="#home" class="logo"><img src="logo.png" alt="LK Graphix Logo"></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -45,15 +43,15 @@
     <section class="stats">
         <div class="container stats-grid">
             <div class="stat-item" data-aos="zoom-in">
-                <h2 class="counter">250+</h2>
+                <div class="stat-header"><h2 class="counter" data-target="250">0</h2><span>+</span></div>
                 <p>Projects Done</p>
             </div>
             <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-                <h2 class="counter">150+</h2>
+                <div class="stat-header"><h2 class="counter" data-target="150">0</h2><span>+</span></div>
                 <p>Happy Clients</p>
             </div>
             <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                <h2 class="counter">5+</h2>
+                <div class="stat-header"><h2 class="counter" data-target="5">0</h2><span>+</span></div>
                 <p>Years Experience</p>
             </div>
         </div>
@@ -90,22 +88,22 @@
                 <div class="process-step" data-aos="fade-up">
                     <div class="step-number">01</div>
                     <h3>Discovery</h3>
-                    <p>We discuss your goals and brand requirements.</p>
+                    <p>Discussing your goals and requirements.</p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-number">02</div>
                     <h3>Concept</h3>
-                    <p>Creating initial drafts and visual directions.</p>
+                    <p>Creating initial drafts and directions.</p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-number">03</div>
                     <h3>Refinement</h3>
-                    <p>Polishing the design based on your feedback.</p>
+                    <p>Polishing the design based on feedback.</p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-number">04</div>
                     <h3>Delivery</h3>
-                    <p>Providing high-quality files ready for use.</p>
+                    <p>Providing high-quality final files.</p>
                 </div>
             </div>
         </div>
@@ -119,16 +117,8 @@
             </div>
             <div class="contact-box">
                 <div class="contact-info" data-aos="fade-right">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>lkdesing2023@gmail.com</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <h4>WhatsApp</h4>
-                        <p>+94 77 516 9480</p>
-                    </div>
+                    <div class="info-item"><i class="fas fa-envelope"></i><h4>Email</h4><p>lkdesing2023@gmail.com</p></div>
+                    <div class="info-item"><i class="fas fa-phone"></i><h4>WhatsApp</h4><p>+94 77 516 9480</p></div>
                 </div>
                 <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form" data-aos="fade-left">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -152,11 +142,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
