@@ -1,11 +1,36 @@
 // Mobile Menu
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Back to Top Logic
+const btt = document.getElementById('backToTop');
+window.onscroll = () => {
+    if (window.scrollY > 400) {
+        btt.style.display = "flex";
+    } else {
+        btt.style.display = "none";
+    }
+};
+btt.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// FAQ Logic
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+});
 
 // Counting Animation
 const counters = document.querySelectorAll('.counter');
 const speed = 200;
+
 const startCount = () => {
     counters.forEach(counter => {
         const updateCount = () => {
@@ -15,7 +40,9 @@ const startCount = () => {
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
                 setTimeout(updateCount, 15);
-            } else { counter.innerText = target; }
+            } else {
+                counter.innerText = target;
+            }
         };
         updateCount();
     });
@@ -31,4 +58,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 observer.observe(statsSection);
 
+// Initialize AOS
 AOS.init({ duration: 1000, once: true });
