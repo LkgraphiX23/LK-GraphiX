@@ -1,68 +1,56 @@
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
-
-if (mobileMenu) {
-    mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+// Initialize AOS with Professional Duration
+AOS.init({
+    duration: 1000, // Standard speed (not too fast, not too slow)
+    once: true,     // Animation only plays once for a clean look
+    offset: 120
 });
+
+// Mobile Menu Fix
+document.getElementById('mobileMenu').onclick = () => {
+    document.getElementById('navLinks').classList.toggle('active');
+};
 
 // FAQ Accordion
 document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', () => {
+    item.onclick = () => {
         item.classList.toggle('active');
         const icon = item.querySelector('i');
         icon.classList.toggle('fa-chevron-down');
         icon.classList.toggle('fa-chevron-up');
-    });
+    };
 });
 
-// Counter Animation
+// Counter Animation Logic
 const counters = document.querySelectorAll('.counter');
-const startCount = () => {
+const startCounter = () => {
     counters.forEach(counter => {
         const update = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
-            const increment = target / 50;
+            const inc = target / 60;
             if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(update, 30);
-            } else {
-                counter.innerText = target;
-            }
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(update, 35);
+            } else { counter.innerText = target; }
         };
         update();
     });
 };
 
-// Intersection Observer for Stats
+// Start counter on scroll
 const statsSec = document.querySelector('.stats');
-if(statsSec) {
-    const observer = new IntersectionObserver((entries) => {
-        if(entries[0].isIntersecting) {
-            startCount();
-            observer.unobserve(statsSec);
-        }
-    }, { threshold: 0.5 });
-    observer.observe(statsSec);
-}
+const obs = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting) {
+        startCounter();
+        obs.unobserve(statsSec);
+    }
+}, { threshold: 0.5 });
+obs.observe(statsSec);
 
-// Back to Top
-const btt = document.getElementById('backToTop');
+// Back to Top Button
 window.onscroll = () => {
-    if (window.scrollY > 400) btt.style.display = "flex";
+    const btt = document.getElementById('backToTop');
+    if (window.scrollY > 500) btt.style.display = "flex";
     else btt.style.display = "none";
 };
-btt.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-// AOS Animation Init
-AOS.init({ duration: 1000, once: true });
+document.getElementById('backToTop').onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
