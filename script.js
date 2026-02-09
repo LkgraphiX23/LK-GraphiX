@@ -1,23 +1,37 @@
-// Initialize AOS with Professional Duration
+// Initialize Animations (Professional Speed)
 AOS.init({
-    duration: 1000, // Standard speed (not too fast, not too slow)
-    once: true,     // Animation only plays once for a clean look
-    offset: 120
+    duration: 1000,
+    once: true,
+    offset: 100
 });
 
-// Mobile Menu Fix
-document.getElementById('mobileMenu').onclick = () => {
-    document.getElementById('navLinks').classList.toggle('active');
-};
+// Mobile Menu Toggle Logic
+const mobileMenu = document.getElementById('mobileMenu');
+const navLinks = document.getElementById('navLinks');
 
-// FAQ Accordion
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Change bars icon to times
+    const icon = mobileMenu.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+// Close menu on link click (for mobile)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+// FAQ Accordion Logic
 document.querySelectorAll('.faq-item').forEach(item => {
-    item.onclick = () => {
+    item.addEventListener('click', () => {
         item.classList.toggle('active');
         const icon = item.querySelector('i');
-        icon.classList.toggle('fa-chevron-down');
-        icon.classList.toggle('fa-chevron-up');
-    };
+        icon.classList.toggle('fa-plus');
+        icon.classList.toggle('fa-minus');
+    });
 });
 
 // Counter Animation Logic
@@ -27,30 +41,37 @@ const startCounter = () => {
         const update = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
-            const inc = target / 60;
+            const inc = target / 50;
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
-                setTimeout(update, 35);
-            } else { counter.innerText = target; }
+                setTimeout(update, 30);
+            } else {
+                counter.innerText = target;
+            }
         };
         update();
     });
 };
 
-// Start counter on scroll
+// Start counters when stats section is visible
 const statsSec = document.querySelector('.stats');
-const obs = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
         startCounter();
-        obs.unobserve(statsSec);
+        observer.unobserve(statsSec);
     }
 }, { threshold: 0.5 });
-obs.observe(statsSec);
+observer.observe(statsSec);
 
-// Back to Top Button
+// Back to Top functionality
+const btt = document.getElementById('backToTop');
 window.onscroll = () => {
-    const btt = document.getElementById('backToTop');
-    if (window.scrollY > 500) btt.style.display = "flex";
-    else btt.style.display = "none";
+    if (window.scrollY > 500) {
+        btt.style.display = "flex";
+    } else {
+        btt.style.display = "none";
+    }
 };
-document.getElementById('backToTop').onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+btt.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
