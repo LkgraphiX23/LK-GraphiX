@@ -1,22 +1,27 @@
-// AOS Animation
+// Initialize AOS
 AOS.init({ duration: 1000, once: true });
 
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+// Mobile Menu
+const menuToggle = document.getElementById('mobileMenu');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-// FAQ Toggle
+// FAQ Accordion
 document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', () => {
         item.classList.toggle('active');
+        const icon = item.querySelector('i');
+        icon.classList.toggle('fa-plus');
+        icon.classList.toggle('fa-minus');
     });
 });
 
-// Back to Top Button Logic
+// Back to Top Button
 const btt = document.getElementById('backToTop');
 window.onscroll = () => {
-    if (window.scrollY > 500) { btt.style.display = "flex"; }
+    if (window.scrollY > 400) { btt.style.display = "flex"; }
     else { btt.style.display = "none"; }
 };
 btt.addEventListener('click', () => {
@@ -40,8 +45,12 @@ const startCount = () => {
     });
 };
 
-const statsSection = document.querySelector('.stats');
+// Start counters on scroll
+const statsSec = document.querySelector('.stats');
 const observer = new IntersectionObserver((entries) => {
-    if(entries[0].isIntersecting) { startCount(); observer.unobserve(statsSection); }
+    if(entries[0].isIntersecting) {
+        startCount();
+        observer.unobserve(statsSec);
+    }
 }, { threshold: 0.5 });
-observer.observe(statsSection);
+observer.observe(statsSec);
