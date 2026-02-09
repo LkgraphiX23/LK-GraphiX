@@ -12,12 +12,28 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Logo එක Navbar එකට ගැලපෙන විදියට හදන කුඩා CSS කෑල්ලක් */
+        .navbar .logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+            transition: 0.3s;
+        }
+        .navbar .logo img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">LK <span>Graphix</span></h1>
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="LK Graphix Logo">
+            </a>
+            
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -109,7 +125,7 @@
 
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="image-box">
-                        <img src="design3.jpg" alt="Design 3">
+                        <img src="design2.jpg" alt="Design 2">
                     </div>
                     <div class="overlay">
                         <h3>Social Media Pack</h3>
@@ -119,7 +135,7 @@
 
                 <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="image-box">
-                        <img src="design2.jpg" alt="Design 2">
+                        <img src="design3.jpg" alt="Design 3">
                     </div>
                     <div class="overlay">
                         <h3>Modern Logo Design</h3>
@@ -198,6 +214,3 @@
     </script>
 </body>
 </html>
-
-
-
