@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 
-// Counting Animation
+// Counter Animation
 const counters = document.querySelectorAll('.counter');
 const speed = 200;
 const startCount = () => {
@@ -21,7 +21,7 @@ const startCount = () => {
     });
 };
 
-// Start when scrolled
+// Start Animation on Scroll
 const statsSection = document.querySelector('.stats');
 const observer = new IntersectionObserver((entries) => {
     if(entries[0].isIntersecting) {
@@ -31,4 +31,25 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 observer.observe(statsSection);
 
+// FAQ Accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
+
+// Back to Top Button
+const backToTop = document.getElementById('backToTop');
+window.onscroll = () => {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+};
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Initialize AOS
 AOS.init({ duration: 1000, once: true });
