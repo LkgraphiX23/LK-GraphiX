@@ -14,7 +14,7 @@
 <body>
 
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="container">
             <a href="#home" class="logo"><img src="logo.png" alt="LK Graphix Logo"></a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -29,7 +29,7 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="container hero-container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
             <h3 class="subtitle">Hello, I'm a</h3>
             <h1 class="title">Professional <br><span>Graphic Designer</span></h1>
             <p class="description">Creating high-quality visual solutions for brands worldwide. From creative logos to stunning social media and print designs.</p>
@@ -58,14 +58,14 @@
     </section>
 
     <section id="about" class="section">
-        <div class="container center-content">
+        <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>About Me</h2>
-                <p>The Creative Visionary Behind the Designs</p>
+                <div class="underline"></div>
             </div>
             <div class="about-content" data-aos="fade-up">
                 <h3>Transforming Ideas into Iconic Visual Realities.</h3>
-                <p>I am a Professional Graphic Designer dedicated to delivering high-impact visual solutions for clients across the globe.</p>
+                <p>I am a Professional Graphic Designer dedicated to delivering high-impact visual solutions for clients across the globe. I focus on creating designs that leave a lasting impression.</p>
                 <div class="skills">
                     <span><i class="fab fa-adobe"></i> Photoshop</span>
                     <span><i class="fas fa-pen-nib"></i> Illustrator</span>
@@ -80,7 +80,7 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>My Services</h2>
-                <p>What I can do for you</p>
+                <div class="underline"></div>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-aos="zoom-in">
@@ -106,7 +106,7 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>My Portfolio</h2>
-                <p>Latest Projects</p>
+                <div class="underline"></div>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-aos="fade-up"><img src="design1.jpg" alt="Work 1"><div class="overlay"><h3>Branding</h3></div></div>
@@ -121,26 +121,38 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Pricing Plans</h2>
-                <p>Choose the best plan for you</p>
+                <div class="underline"></div>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card" data-aos="zoom-in">
                     <h3>Basic</h3>
                     <div class="price">$25<span> / Start</span></div>
-                    <ul><li><i class="fas fa-check"></i> 1 Design Concept</li><li><i class="fas fa-check"></i> HQ JPG/PNG</li><li><i class="fas fa-check"></i> 2 Revisions</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 Design Concept</li>
+                        <li><i class="fas fa-check"></i> HQ JPG/PNG</li>
+                        <li><i class="fas fa-check"></i> 2 Revisions</li>
+                    </ul>
                     <a href="https://wa.me/94775169480" class="btn btn-secondary">Order Now</a>
                 </div>
                 <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="100">
                     <div class="badge">Popular</div>
                     <h3>Standard</h3>
                     <div class="price">$60<span> / Start</span></div>
-                    <ul><li><i class="fas fa-check"></i> 2 Design Concepts</li><li><i class="fas fa-check"></i> Source Files</li><li><i class="fas fa-check"></i> Unlimited Revisions</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 2 Design Concepts</li>
+                        <li><i class="fas fa-check"></i> Source Files (AI/PSD)</li>
+                        <li><i class="fas fa-check"></i> Unlimited Revisions</li>
+                    </ul>
                     <a href="https://wa.me/94775169480" class="btn btn-primary">Order Now</a>
                 </div>
                 <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
                     <h3>Premium</h3>
                     <div class="price">$120<span> / Start</span></div>
-                    <ul><li><i class="fas fa-check"></i> 3 Premium Concepts</li><li><i class="fas fa-check"></i> Branding Kit</li><li><i class="fas fa-check"></i> VIP Support</li></ul>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 3 Premium Concepts</li>
+                        <li><i class="fas fa-check"></i> Full Branding Kit</li>
+                        <li><i class="fas fa-check"></i> VIP Priority Support</li>
+                    </ul>
                     <a href="https://wa.me/94775169480" class="btn btn-secondary">Order Now</a>
                 </div>
             </div>
@@ -151,14 +163,14 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Contact Me</h2>
-                <p>Let's start your project</p>
+                <div class="underline"></div>
             </div>
             <div class="contact-box">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <div class="info-item"><i class="fas fa-envelope"></i><h4>Email</h4><p>lkdesing2023@gmail.com</p></div>
                     <div class="info-item"><i class="fas fa-phone"></i><h4>WhatsApp</h4><p>+94 77 516 9480</p></div>
                 </div>
-                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/xbdalojp" method="POST" class="contact-form" data-aos="fade-left">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
@@ -170,13 +182,11 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 <strong>LK Graphix</strong>. All Rights Reserved.</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/94775169480" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
+            <p>&copy; 2026 <strong>LK Graphix</strong>. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/94775169480" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
